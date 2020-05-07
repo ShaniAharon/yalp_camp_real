@@ -10,7 +10,8 @@ var passport = require("passport");
 var methodOverride = require("method-override");
 var LocalStrategy = require("passport-local");
 var User = require("./models/user");
-mongoose.connect(process.env.DATABASEURL,{useNewUrlParser: true, useUnifiedTopology: true}).then(()=>{
+const url = process.env.DATABASEURL || "mongodb://localhost:27017/yelp_camp";
+mongoose.connect(url,{useNewUrlParser: true, useUnifiedTopology: true}).then(()=>{
   console.log("connected to db");
 }).catch(err =>{
   console.log("ERROR:",err.message);
