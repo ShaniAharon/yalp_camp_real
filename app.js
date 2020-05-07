@@ -16,8 +16,6 @@ mongoose.connect(url,{useNewUrlParser: true, useUnifiedTopology: true}).then(()=
 }).catch(err =>{
   console.log("ERROR:",err.message);
 });
-//mongodb+srv://shani:shanidatabase14798@cluster0-t7kj9.mongodb.net/yelp_camp?retryWrites=true&w=majority
-//mongodb://localhost:27017/yelp_camp
 // requring routes
 var commentRoutes = require("./routes/comments");
 var campgroundRoutes = require("./routes/campgrounds");
